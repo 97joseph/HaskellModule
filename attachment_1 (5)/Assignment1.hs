@@ -56,12 +56,19 @@ bit2Int = undefined
 
 -------------------------------------
 
-{-5) Define the remNth function which removes every nth value from a given list. e.g remNth 2 "asasasasas" = "aaaaa" and remNth 1 [1,2,3,4,5] = []. For a value of 0 your function should return the original list. (2 marks)-}
+{-5ine the remNth function which removes every nth value from a given list. e.g remNth 2 "asasasasas" = "aaaaa" and remNth 1 [1,2,3,4,5] = []. For a value of 0 your function should return the original list. (2 marks)-}
 
 remNth::Int -> [a] -> [a]
 remNth = undefined 
-
-
+) Def
+mss :: [Int] -> Int
+mss l = mss' l 0 0 where
+   mss' [] a m = m
+   mss' xs'@(x:xs) a m
+      | a >= 0 && m >= x^3+a   = mss' xs (x^3+a) m
+      | a >= 0 && m < x^3+a    = mss' xs (x^3+a) (x^3+a)
+      | a < 0  && m >= x^3     = mss' xs (x^3) m
+      | a < 0  && m < x^3      = mss' xs (x^3) (x^3)
 
 -- Do not alter the following line
 module Assignment1 (char_to_int, repeat_char, decode, int_to_char, length_char, drop_char, encode, complex_encode, complex_decode) where
@@ -169,5 +176,9 @@ complex_decode = error "Not implemented"
 
 
 
+--part 5
+remNth::Int -> [a] -> [a]
+remNth = undefined 
+) Def
 
 
